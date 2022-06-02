@@ -10,9 +10,14 @@ public class Main {
                 "In one cave, the dragon is friendly and will share his treasure with you. The other\n" +
                 "dragon is greedy and hungry and will eat you on sight. Which cave will you go into?\n");
         System.out.println("(1 or 2)?");
-        int num = myScanner.nextInt();
-        System.out.println(num);
-
+        int num = 0;
+        try
+        {
+            num = myScanner.nextInt();
+        } catch (Exception err)
+        {
+            System.out.println(err.getClass().getName());
+        }
         if (num == 1)
         {
             System.out.print("You approach the cave...\n" +
