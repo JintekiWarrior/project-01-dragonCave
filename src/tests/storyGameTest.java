@@ -47,4 +47,15 @@ class storyGameTest {
         String actual = storyGame.endingTwo();
         assertEquals(expected, actual);
     }
+
+    @Test
+    void chooseEnding()
+    {
+        String expected = "You approach the cave...\n" +
+                "It is dark and spooky...\n" +
+                "A large dragon jumps out in front of you! He opens his jaws and..\n" +
+                "Hands you all of the treasure.";
+        String actual = storyGame.chooseEnding(2);
+        assertEquals(expected, actual);
+    }
 }
